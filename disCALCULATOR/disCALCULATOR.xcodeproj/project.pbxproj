@@ -16,6 +16,8 @@
 		9E6151D82A0EAB3400903FDA /* disCALCULATORUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151D72A0EAB3400903FDA /* disCALCULATORUITestsLaunchTests.swift */; };
 		9E6151E72A0EB23500903FDA /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151E62A0EB23400903FDA /* ClockView.swift */; };
 		9E6151E92A0EB25300903FDA /* TimeAsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151E82A0EB25300903FDA /* TimeAsTextView.swift */; };
+		9E6151EB2A0EB71C00903FDA /* TimeInTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151EA2A0EB71C00903FDA /* TimeInTextView.swift */; };
+		9E6151EF2A0EBBE000903FDA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151EE2A0EBBE000903FDA /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		9E6151D72A0EAB3400903FDA /* disCALCULATORUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = disCALCULATORUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9E6151E62A0EB23400903FDA /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		9E6151E82A0EB25300903FDA /* TimeAsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAsTextView.swift; sourceTree = "<group>"; };
+		9E6151EA2A0EB71C00903FDA /* TimeInTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInTextView.swift; sourceTree = "<group>"; };
+		9E6151EE2A0EBBE000903FDA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,13 @@
 			children = (
 				9E6151B92A0EAB3200903FDA /* disCALCULATORApp.swift */,
 				9E6151BB2A0EAB3200903FDA /* ContentView.swift */,
+				9E6151EA2A0EB71C00903FDA /* TimeInTextView.swift */,
 				9E6151BD2A0EAB3400903FDA /* Assets.xcassets */,
 				9E6151BF2A0EAB3400903FDA /* disCALCULATOR.entitlements */,
 				9E6151C02A0EAB3400903FDA /* Preview Content */,
 				9E6151E62A0EB23400903FDA /* ClockView.swift */,
 				9E6151E82A0EB25300903FDA /* TimeAsTextView.swift */,
+				9E6151EE2A0EBBE000903FDA /* HeaderView.swift */,
 			);
 			path = disCALCULATOR;
 			sourceTree = "<group>";
@@ -266,8 +272,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E6151E72A0EB23500903FDA /* ClockView.swift in Sources */,
+				9E6151EF2A0EBBE000903FDA /* HeaderView.swift in Sources */,
 				9E6151BC2A0EAB3200903FDA /* ContentView.swift in Sources */,
 				9E6151E92A0EB25300903FDA /* TimeAsTextView.swift in Sources */,
+				9E6151EB2A0EB71C00903FDA /* TimeInTextView.swift in Sources */,
 				9E6151BA2A0EAB3200903FDA /* disCALCULATORApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,12 +30,6 @@ struct ContentView: View {
     }
 }
 
-struct TextAsTimeView: View {
-    var body: some View {
-        Text("Text as Time View")
-    }
-}
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
@@ -50,26 +44,5 @@ struct NumberTextField: View {
     var body: some View {
         TextField(title, value: $value, formatter: formatter)
             .padding()
-    }
-}
-
-
-struct TimeInTextView: View {
-    @State private var currentTime: Date = Date()
-    
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-
-    var body: some View {
-        VStack {
-            Text("Current Time as Text")
-                .font(.largeTitle)
-                .padding()
-            
-            Text("\(currentTime, style: .time)")
-                .font(.largeTitle)
-                .onReceive(timer) { input in
-                    self.currentTime = input
-                }
-        }
     }
 }
