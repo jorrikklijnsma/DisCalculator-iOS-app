@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9E364B212A1275BA0086C70A /* TimeInTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151EA2A0EB71C00903FDA /* TimeInTextView.swift */; };
 		9E4593E22A12895C002D6589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E6151BD2A0EAB3400903FDA /* Assets.xcassets */; };
+		9E4593E72A12A698002D6589 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E4593E62A12A698002D6589 /* Media.xcassets */; };
 		9E6151BA2A0EAB3200903FDA /* disCALCULATORApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151B92A0EAB3200903FDA /* disCALCULATORApp.swift */; };
 		9E6151BC2A0EAB3200903FDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151BB2A0EAB3200903FDA /* ContentView.swift */; };
 		9E6151CC2A0EAB3400903FDA /* disCALCULATORTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151CB2A0EAB3400903FDA /* disCALCULATORTests.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E4593E62A12A698002D6589 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		9E6151B62A0EAB3200903FDA /* disCALCULATOR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = disCALCULATOR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6151B92A0EAB3200903FDA /* disCALCULATORApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = disCALCULATORApp.swift; sourceTree = "<group>"; };
 		9E6151BB2A0EAB3200903FDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		9E6151AD2A0EAB3200903FDA = {
 			isa = PBXGroup;
 			children = (
+				9E4593E62A12A698002D6589 /* Media.xcassets */,
 				9E6151B82A0EAB3200903FDA /* disCALCULATOR */,
 				9E6151CA2A0EAB3400903FDA /* disCALCULATORTests */,
 				9E6151D42A0EAB3400903FDA /* disCALCULATORUITests */,
@@ -237,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E4593E72A12A698002D6589 /* Media.xcassets in Resources */,
 				9E4593E22A12895C002D6589 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,7 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = secondary;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = disCALCULATOR/disCALCULATOR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -472,7 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = secondary;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = disCALCULATOR/disCALCULATOR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";

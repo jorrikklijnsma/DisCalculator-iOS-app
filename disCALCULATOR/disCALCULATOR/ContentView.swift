@@ -9,23 +9,20 @@ struct ContentView: View {
     @State private var selectedTab: Tab = .timeAsText
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Picker("Views", selection: $selectedTab) {
-                    Text("Time as Text").tag(Tab.timeAsText)
-                    Text("Text as Time").tag(Tab.textAsTime)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding()
-                
-                switch selectedTab {
-                case .timeAsText:
-                    TimeAsTextView()
-                case .textAsTime:
-                    TimeInTextView()
-                }
+        VStack {
+            Picker("Views", selection: $selectedTab) {
+                Text("Time as Text").tag(Tab.timeAsText)
+                Text("Text as Time").tag(Tab.textAsTime)
             }
-            .navigationBarTitle("disCALCULATOR", displayMode: .inline)
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+            
+            switch selectedTab {
+            case .timeAsText:
+                TimeAsTextView()
+            case .textAsTime:
+                TimeInTextView()
+            }
         }
     }
 }
