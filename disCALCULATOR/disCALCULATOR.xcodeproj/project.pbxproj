@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9E364B212A1275BA0086C70A /* TimeInTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151EA2A0EB71C00903FDA /* TimeInTextView.swift */; };
+		9E4593E22A12895C002D6589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E6151BD2A0EAB3400903FDA /* Assets.xcassets */; };
 		9E6151BA2A0EAB3200903FDA /* disCALCULATORApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151B92A0EAB3200903FDA /* disCALCULATORApp.swift */; };
 		9E6151BC2A0EAB3200903FDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151BB2A0EAB3200903FDA /* ContentView.swift */; };
-		9E6151BE2A0EAB3400903FDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E6151BD2A0EAB3400903FDA /* Assets.xcassets */; };
 		9E6151CC2A0EAB3400903FDA /* disCALCULATORTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151CB2A0EAB3400903FDA /* disCALCULATORTests.swift */; };
 		9E6151D62A0EAB3400903FDA /* disCALCULATORUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151D52A0EAB3400903FDA /* disCALCULATORUITests.swift */; };
 		9E6151D82A0EAB3400903FDA /* disCALCULATORUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151D72A0EAB3400903FDA /* disCALCULATORUITestsLaunchTests.swift */; };
@@ -50,6 +50,7 @@
 		9E6151E82A0EB25300903FDA /* TimeAsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAsTextView.swift; sourceTree = "<group>"; };
 		9E6151EA2A0EB71C00903FDA /* TimeInTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInTextView.swift; sourceTree = "<group>"; };
 		9E6151EE2A0EBBE000903FDA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		9E7A9F642A1286E300591B74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +108,7 @@
 				9E6151E62A0EB23400903FDA /* ClockView.swift */,
 				9E6151E82A0EB25300903FDA /* TimeAsTextView.swift */,
 				9E6151EE2A0EBBE000903FDA /* HeaderView.swift */,
+				9E7A9F642A1286E300591B74 /* Info.plist */,
 			);
 			path = disCALCULATOR;
 			sourceTree = "<group>";
@@ -235,7 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E6151BE2A0EAB3400903FDA /* Assets.xcassets in Resources */,
+				9E4593E22A12895C002D6589 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
