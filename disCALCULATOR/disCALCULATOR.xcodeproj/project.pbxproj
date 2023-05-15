@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E364B212A1275BA0086C70A /* TimeInTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151EA2A0EB71C00903FDA /* TimeInTextView.swift */; };
 		9E6151BA2A0EAB3200903FDA /* disCALCULATORApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151B92A0EAB3200903FDA /* disCALCULATORApp.swift */; };
 		9E6151BC2A0EAB3200903FDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151BB2A0EAB3200903FDA /* ContentView.swift */; };
 		9E6151BE2A0EAB3400903FDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E6151BD2A0EAB3400903FDA /* Assets.xcassets */; };
-		9E6151C22A0EAB3400903FDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E6151C12A0EAB3400903FDA /* Preview Assets.xcassets */; };
 		9E6151CC2A0EAB3400903FDA /* disCALCULATORTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151CB2A0EAB3400903FDA /* disCALCULATORTests.swift */; };
 		9E6151D62A0EAB3400903FDA /* disCALCULATORUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151D52A0EAB3400903FDA /* disCALCULATORUITests.swift */; };
 		9E6151D82A0EAB3400903FDA /* disCALCULATORUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151D72A0EAB3400903FDA /* disCALCULATORUITestsLaunchTests.swift */; };
 		9E6151E72A0EB23500903FDA /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151E62A0EB23400903FDA /* ClockView.swift */; };
 		9E6151E92A0EB25300903FDA /* TimeAsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151E82A0EB25300903FDA /* TimeAsTextView.swift */; };
-		9E6151EB2A0EB71C00903FDA /* TimeInTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151EA2A0EB71C00903FDA /* TimeInTextView.swift */; };
 		9E6151EF2A0EBBE000903FDA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6151EE2A0EBBE000903FDA /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +41,6 @@
 		9E6151B92A0EAB3200903FDA /* disCALCULATORApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = disCALCULATORApp.swift; sourceTree = "<group>"; };
 		9E6151BB2A0EAB3200903FDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9E6151BD2A0EAB3400903FDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9E6151BF2A0EAB3400903FDA /* disCALCULATOR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = disCALCULATOR.entitlements; sourceTree = "<group>"; };
-		9E6151C12A0EAB3400903FDA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9E6151C72A0EAB3400903FDA /* disCALCULATORTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = disCALCULATORTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6151CB2A0EAB3400903FDA /* disCALCULATORTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = disCALCULATORTests.swift; sourceTree = "<group>"; };
 		9E6151D12A0EAB3400903FDA /* disCALCULATORUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = disCALCULATORUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,21 +104,11 @@
 				9E6151BB2A0EAB3200903FDA /* ContentView.swift */,
 				9E6151EA2A0EB71C00903FDA /* TimeInTextView.swift */,
 				9E6151BD2A0EAB3400903FDA /* Assets.xcassets */,
-				9E6151BF2A0EAB3400903FDA /* disCALCULATOR.entitlements */,
-				9E6151C02A0EAB3400903FDA /* Preview Content */,
 				9E6151E62A0EB23400903FDA /* ClockView.swift */,
 				9E6151E82A0EB25300903FDA /* TimeAsTextView.swift */,
 				9E6151EE2A0EBBE000903FDA /* HeaderView.swift */,
 			);
 			path = disCALCULATOR;
-			sourceTree = "<group>";
-		};
-		9E6151C02A0EAB3400903FDA /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				9E6151C12A0EAB3400903FDA /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		9E6151CA2A0EAB3400903FDA /* disCALCULATORTests */ = {
@@ -204,6 +191,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
@@ -222,11 +212,11 @@
 			};
 			buildConfigurationList = 9E6151B12A0EAB3200903FDA /* Build configuration list for PBXProject "disCALCULATOR" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = nl;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				nl,
 			);
 			mainGroup = 9E6151AD2A0EAB3200903FDA;
 			productRefGroup = 9E6151B72A0EAB3200903FDA /* Products */;
@@ -245,7 +235,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E6151C22A0EAB3400903FDA /* Preview Assets.xcassets in Resources */,
 				9E6151BE2A0EAB3400903FDA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,8 +263,8 @@
 				9E6151E72A0EB23500903FDA /* ClockView.swift in Sources */,
 				9E6151EF2A0EBBE000903FDA /* HeaderView.swift in Sources */,
 				9E6151BC2A0EAB3200903FDA /* ContentView.swift in Sources */,
+				9E364B212A1275BA0086C70A /* TimeInTextView.swift in Sources */,
 				9E6151E92A0EB25300903FDA /* TimeAsTextView.swift in Sources */,
-				9E6151EB2A0EB71C00903FDA /* TimeInTextView.swift in Sources */,
 				9E6151BA2A0EAB3200903FDA /* disCALCULATORApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -415,6 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -427,7 +418,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = disCALCULATOR/disCALCULATOR.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"disCALCULATOR/Preview Content\"";
@@ -435,23 +428,27 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = disCALCULATOR/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = disCALCULATOR;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.jorrikklijnsma.disCALCULATOR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -467,7 +464,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = disCALCULATOR/disCALCULATOR.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"disCALCULATOR/Preview Content\"";
@@ -475,23 +474,27 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = disCALCULATOR/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = disCALCULATOR;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.jorrikklijnsma.disCALCULATOR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

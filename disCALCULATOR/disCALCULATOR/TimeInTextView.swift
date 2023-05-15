@@ -136,7 +136,7 @@ struct TimeInTextView: View {
                         }
                     }
                 }
-                .padding(.bottom, 20)
+                .padding(.bottom, 40)
                 ClockView(minutes: Binding(get: { Double(timeData.minuteForClock) }, set: { timeData.minuteForClock = Int($0) }), hours: Binding(get: { Double(timeData.hourForClock) }, set: { timeData.hourForClock = Int($0) }))
             }
             .padding()
@@ -145,17 +145,25 @@ struct TimeInTextView: View {
             VStack {
                 Text("Selecteer de text:")
                     .font(.system(size: 22))
+                    .padding(.bottom)
                 
-                Form {
+                HStack {
+                    Spacer()
                     Picker("Kies een tijd", selection: $timeData.selectedIntervalIndex) {
                         ForEach(timeData.intervalCombined.indices, id: \.self) { index in
                             Text(timeData.intervalCombined[index].text).tag(index)
                         }
                     }
                     .pickerStyle(MenuPickerStyle())
+                    .padding()
+                    .background(Color("background"))
+                    .accentColor(Color("primary"))
+                    .cornerRadius(10)
                     .onChange(of: timeData.selectedIntervalIndex, perform: { value in
                         timeData.calcText()
                     })
+                    
+                    Spacer()
                     
                     Picker("Kies een uur", selection: $timeData.selectedHourIndex) {
                         ForEach(timeData.hours.indices, id: \.self) { index in
@@ -163,10 +171,17 @@ struct TimeInTextView: View {
                         }
                     }
                     .pickerStyle(MenuPickerStyle())
+                    .padding()
+                    .background(Color("background"))
+                    .accentColor(Color("primary"))
+                    .cornerRadius(10)
                     .onChange(of: timeData.selectedHourIndex, perform: { value in
                         timeData.calcText()
                     })
+                    Spacer()
                 }
+                .padding()
+                .background(Color("secondary"))
             }
         }
         .onReceive(timeData.$selectedIntervalIndex) { _ in

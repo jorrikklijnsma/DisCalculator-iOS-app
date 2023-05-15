@@ -125,70 +125,93 @@ struct TimeAsTextView: View {
     @ObservedObject var timeAsTextData = TimeAsTextData()
     
     var body: some View {
-        VStack(alignment: .center, spacing: 20) {
+        VStack() {
             if !timeAsTextData.errorText.isEmpty {
                 Text(timeAsTextData.errorText)
             }
             
             Text("Je zegt:")
                 .font(.system(size: 22))
+                .padding(.bottom)
             
-            List(timeAsTextData.timeText, id: \.type) { labelTypeObject in
-                HStack {
-                    Text(labelTypeObject.type)
-                        .fontWeight(.light)
-                        .font(.body)
-                    Spacer()
-                    Text(labelTypeObject.value)
-                        .fontWeight(.regular)
-                        .font(.body).italic()
+            ScrollView {
+                VStack {
+                    ForEach(timeAsTextData.timeText, id: \.self.value) { labelTypeObject in
+                        HStack {
+                            Text(labelTypeObject.type)
+                                .fontWeight(.light)
+                                .font(.body)
+                            Spacer()
+                            Text(labelTypeObject.value)
+                                .fontWeight(.regular)
+                                .font(.body).italic()
+                        }
+                        .padding()
+                        .background(Color("background"))
+                        .cornerRadius(8)
+                    }
                 }
-            }
-            
-            ClockView(minutes: Binding(get: { Double(timeAsTextData.minuteValue) }, set: { timeAsTextData.minuteValue = Int($0) }), hours: Binding(get: { Double(timeAsTextData.hourValue) }, set: { timeAsTextData.hourValue = Int($0) }))
-            
-            Spacer()
-            
-            Text("Selecteer de tijd:")
-                .font(.system(size: 22))
-            
-            HStack {
-                TextField("0", text: $timeAsTextData.hours)
-                    .onChange(of: timeAsTextData.hours) { newValue in
-                        if let intValue = Int(newValue), intValue >= 0, intValue <= 23 {
-                            // valid input
-                        } else {
-                            // invalid input, reset
-                            timeAsTextData.hours = ""
-                        }
-                    }
-                    .keyboardType(.numberPad)
-                    .frame(width: 40)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color("primary"), lineWidth: 1.5))
-                    .foregroundColor(Color("primary"))
-                    
-                Text(":")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding(.horizontal, 10)
-                    
-                TextField("0", text: $timeAsTextData.minutes)
-                    .onChange(of: timeAsTextData.minutes) { newValue in
-                        if let intValue = Int(newValue), intValue >= 0, intValue <= 59 {
-                            // valid input
-                        } else {
-                            // invalid input, reset
-                            timeAsTextData.minutes = ""
-                        }
-                    }
-                    .keyboardType(.numberPad)
-                    .frame(width: 40)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color("primary"), lineWidth: 1.5))
-                    .foregroundColor(Color("primary"))
-            }
+                .padding(.bottom, 20)
                 
+                ClockView(minutes: Binding(get: { Double(timeAsTextData.minuteValue) }, set: { timeAsTextData.minuteValue = Int($0) }), hours: Binding(get: { Double(timeAsTextData.hourValue) }, set: { timeAsTextData.hourValue = Int($0) }))
+            }
+            .padding()
+        
+            VStack {
+                Text("Selecteer de tijd:")
+                    .font(.system(size: 22))
+                    .padding(.bottom)
+                
+                HStack {
+                    
+                    Spacer()
+                    
+                    TextField("0", text: $timeAsTextData.hours)
+                        .onChange(of: timeAsTextData.hours) { newValue in
+                            if let intValue = Int(newValue), intValue >= 0, intValue <= 23 {
+                                // valid input
+                                
+                            } else {
+                                // invalid input, reset
+                                timeAsTextData.hours = ""
+                            }
+                        }
+                        .keyboardType(.numberPad)
+                        .frame(width: 40)
+                        .padding()
+                        .background(Color("background"))
+                        .foregroundColor(Color("primary"))
+                        .cornerRadius(10)
+                    
+                    Spacer()
+                    
+                    Text(":")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding(.horizontal, 10)
+                    
+                    Spacer()
+                    
+                    TextField("0", text: $timeAsTextData.minutes)
+                        .onChange(of: timeAsTextData.minutes) { newValue in
+                            if let intValue = Int(newValue), intValue >= 0, intValue <= 59 {
+                                // valid input
+                            } else {
+                                // invalid input, reset
+                                timeAsTextData.minutes = ""
+                            }
+                        }
+                        .keyboardType(.numberPad)
+                        .frame(width: 40)
+                        .padding()
+                        .background(Color("background"))
+                        .foregroundColor(Color("primary"))
+                        .cornerRadius(10)
+                    Spacer()
+                }
+                .padding()
+                .background(Color("secondary"))
+            }
         }
         .onReceive(timeAsTextData.$minutes) { _ in
             timeAsTextData.calcText()
