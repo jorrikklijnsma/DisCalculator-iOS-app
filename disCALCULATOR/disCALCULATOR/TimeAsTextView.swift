@@ -123,6 +123,9 @@ class TimeAsTextData: ObservableObject {
 
 struct TimeAsTextView: View {
     @ObservedObject var timeAsTextData = TimeAsTextData()
+    @FocusState private var minutesAreFocused: Bool
+    @FocusState private var hoursAreFocused: Bool
+    
     
     var body: some View {
         VStack() {
@@ -176,8 +179,14 @@ struct TimeAsTextView: View {
                                 timeAsTextData.hours = ""
                             }
                         }
-                        .keyboardType(.numberPad)
+                        .keyboardType(.numbersAndPunctuation)
+                        .submitLabel(.next)
+                        .onSubmit {
+                            hoursAreFocused = false
+                            minutesAreFocused = true
+                        }
                         .frame(width: 40)
+                        .focused($hoursAreFocused)
                         .padding()
                         .background(Color("background"))
                         .foregroundColor(Color("primary"))
@@ -201,7 +210,12 @@ struct TimeAsTextView: View {
                                 timeAsTextData.minutes = ""
                             }
                         }
-                        .keyboardType(.numberPad)
+                        .keyboardType(.numbersAndPunctuation)
+                        .submitLabel(.done)
+                        .onSubmit {
+                            minutesAreFocused = false
+                        }
+                        .focused($minutesAreFocused)
                         .frame(width: 40)
                         .padding()
                         .background(Color("background"))
