@@ -188,9 +188,6 @@ struct TimeAsTextView: View {
                     .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color("primary"), lineWidth: 1.5))
                     .foregroundColor(Color("primary"))
             }
-
-            
-            Spacer()
                 
         }
         .onReceive(timeAsTextData.$minutes) { _ in

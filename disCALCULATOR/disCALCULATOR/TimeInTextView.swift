@@ -96,65 +96,77 @@ struct TimeInTextView: View {
     @ObservedObject var timeData = TimeData()
     
     var body: some View {
-        VStack(alignment: .center, spacing: 20) {
-            if !timeData.late.isEmpty || !timeData.early.isEmpty {
-                Text("Je leest of schrijft")
-                    .font(.system(size: 22))
-                    .padding(.bottom)
-                
-                
-                List {
-                    if !timeData.early.isEmpty && !timeData.earlyMomentOfDay.isEmpty {
-                        HStack {
-                            Text("**\(timeData.earlyMomentOfDay)**:")
-                                .fontWeight(.light)
-                                .font(.body)
-                            Spacer()
-                            Text("\(timeData.early)")
-                                .fontWeight(.regular)
-                                .font(.body).italic()
-                        }
-                    }
-                    if !timeData.late.isEmpty && !timeData.lateMomentOfDay.isEmpty {
-                        HStack {
-                            Text("**\(timeData.lateMomentOfDay)**:")
-                                .fontWeight(.light)
-                                .font(.body)
-                            Spacer()
-                            Text("\(timeData.late)")
-                                .fontWeight(.regular)
-                                .font(.body).italic()
-                        }
-                    }
-                }
-            }
-            
-            ClockView(minutes: Binding(get: { Double(timeData.minuteForClock) }, set: { timeData.minuteForClock = Int($0) }), hours: Binding(get: { Double(timeData.hourForClock) }, set: { timeData.hourForClock = Int($0) }))
-            
-            Spacer()
-            
-            Text("Selecteer de text:")
+        VStack {
+            // fixed on top
+            Text("Je leest of schrijft")
                 .font(.system(size: 22))
-            Form {
-                Picker("Kies een tijd", selection: $timeData.selectedIntervalIndex) {
-                    ForEach(timeData.intervalCombined.indices, id: \.self) { index in
-                        Text(timeData.intervalCombined[index].text).tag(index)
+                .padding(.bottom)
+            
+            // fills the available space and overflow scrolls.
+            ScrollView {
+                VStack {
+                    if !timeData.late.isEmpty || !timeData.early.isEmpty {
+                        if !timeData.early.isEmpty && !timeData.earlyMomentOfDay.isEmpty {
+                            HStack {
+                                Text("**\(timeData.earlyMomentOfDay)**:")
+                                    .fontWeight(.light)
+                                    .font(.body)
+                                Spacer()
+                                Text("\(timeData.early)")
+                                    .fontWeight(.regular)
+                                    .font(.body).italic()
+                            }
+                            .padding()
+                            .background(Color("background"))
+                            .cornerRadius(8)
+                        }
+                        if !timeData.late.isEmpty && !timeData.lateMomentOfDay.isEmpty {
+                            HStack {
+                                Text("**\(timeData.lateMomentOfDay)**:")
+                                    .fontWeight(.light)
+                                    .font(.body)
+                                Spacer()
+                                Text("\(timeData.late)")
+                                    .fontWeight(.regular)
+                                    .font(.body).italic()
+                            }
+                            .padding()
+                            .background(Color("background"))
+                            .cornerRadius(8)
+                        }
                     }
                 }
-                .pickerStyle(MenuPickerStyle())
-                .onChange(of: timeData.selectedIntervalIndex, perform: { value in
-                    timeData.calcText()
-                })
+                .padding(.bottom, 20)
+                ClockView(minutes: Binding(get: { Double(timeData.minuteForClock) }, set: { timeData.minuteForClock = Int($0) }), hours: Binding(get: { Double(timeData.hourForClock) }, set: { timeData.hourForClock = Int($0) }))
+            }
+            .padding()
+            
+            //fixed at the bottom of the screen
+            VStack {
+                Text("Selecteer de text:")
+                    .font(.system(size: 22))
                 
-                Picker("Kies een uur", selection: $timeData.selectedHourIndex) {
-                    ForEach(timeData.hours.indices, id: \.self) { index in
-                        Text(timeData.hours[index].text).tag(index)
+                Form {
+                    Picker("Kies een tijd", selection: $timeData.selectedIntervalIndex) {
+                        ForEach(timeData.intervalCombined.indices, id: \.self) { index in
+                            Text(timeData.intervalCombined[index].text).tag(index)
+                        }
                     }
+                    .pickerStyle(MenuPickerStyle())
+                    .onChange(of: timeData.selectedIntervalIndex, perform: { value in
+                        timeData.calcText()
+                    })
+                    
+                    Picker("Kies een uur", selection: $timeData.selectedHourIndex) {
+                        ForEach(timeData.hours.indices, id: \.self) { index in
+                            Text(timeData.hours[index].text).tag(index)
+                        }
+                    }
+                    .pickerStyle(MenuPickerStyle())
+                    .onChange(of: timeData.selectedHourIndex, perform: { value in
+                        timeData.calcText()
+                    })
                 }
-                .pickerStyle(MenuPickerStyle())
-                .onChange(of: timeData.selectedHourIndex, perform: { value in
-                    timeData.calcText()
-                })
             }
         }
         .onReceive(timeData.$selectedIntervalIndex) { _ in
